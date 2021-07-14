@@ -21,11 +21,10 @@ body{
     margin-top: 110px;
 }
 .header-info{
-    margin-left: 46px;
-   
+    margin-left: 46px;  
 }
 .header-title{
-    font-weight: 700;
+    font-weight: 900;
     width: 485px;
     font-size: 64px;
     color: #ffffff;
@@ -55,8 +54,7 @@ body{
     transition: transform 1s ease-out;
 }
 .header-container:hover .header-banner{
-    transform: skew(-10deg);
-    transform-origin: top right;
+    transform: skew(-20deg);
     
 }
 /*-------------------
