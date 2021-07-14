@@ -11,26 +11,53 @@ body{
 /* header styles start */
 .header-container{
     background-color: #2D25A0;
+    height: 675px;
+    overflow: hidden;
 }
 .top-header{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 110px;
+}
+.header-info{
+    margin-left: 46px;
+   
 }
 .header-title{
-    font-weight: bold;
+    font-weight: 700;
+    width: 485px;
     font-size: 64px;
     color: #ffffff;
+    line-height: 80px;
+    margin-bottom:30px ;
 }
-.header-info a{
+.anchor-button {
     text-decoration: none;
-    color: #ffffff;
+    /* color: #000000d3; */
+    font-weight: 700;
     padding: 10px 24px;
     background-color: #1dd1a1;
+    transition:linear .5s;
+    
+}
+.anchor-button:hover{
+    color: #ffffff;
+    box-shadow: inset 186px 0 0 0 #ff3838;
+    border-radius: 10px;
 }
 .header-banner img{
     width: 556px;
     height: 438px;
+    margin-top: 18px;
+}
+.header-banner{
+    transition: transform 1s ease-out;
+}
+.header-container:hover .header-banner{
+    transform: skew(-10deg);
+    transform-origin: top right;
+    
 }
 /*-------------------
 player styles added 
@@ -62,7 +89,7 @@ main{
     height: 256px;
 }
 .player-name{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 28px;
     color: #18191F;
     margin-bottom:0px;
@@ -71,29 +98,179 @@ main{
     color: #6C6C6C;
     margin-top: 10px;
 }
-/* hightlight section style */
+/*----------------- 
+hightlight section style
+-------------------*/
 .highlight-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
 }
 .highlight-title{
-   width: 469px;
-   height: 309px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+    width: 469px;
+    height: 309px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 20px;
+    top: 6%;
 }
 .highlight-title h2{
+    color: #0A0826;
     font-size: 48px;
     font-weight:700;
     line-height: 60px;
+    
 }
 .highlight-title p{
     color: #6C6C6C;
     line-height: 28px;
+    margin-top: 8px;
+    margin-bottom:24px;
 }
 .highlight-banner img{
     width: 567px;
     height: 427px;
 }
+/* extra section  styles added */
+.extra-section h2{
+    color: #0A0826;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+table{
+    width: 80%;
+    border-collapse: collapse;
+}
+td,th{
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+}
+tr:nth-child(2n){
+    background-color: #c7ecee;
+}
+tr:nth-child(2n+1){
+    background-color: #95afc0;
+}
+/*----------------------
+footer style start here 
+------------------------*/
+.footer-container{
+    margin-top: 150px;
+    margin-bottom: 63px;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo img{
+    width: 484px;
+    height: 110px;
+}
+.footer-icon a{
+    margin-right: 14px;
+    font-size: 32px;
+    color: #ff7979;
+}
+/*----------- 
+media query used for mobile screen 
+------------*/
+@media only screen and (max-width:688px) {
+   /* header starts  */
+   .top-header{
+       display: flex;
+       flex-direction: column;
+   }
+   .header-info{
+       margin-left: 16px
+   }
+   .header-title{
+       width: 278px;
+       font-size: 36px;
+       line-height: 50px;
+   }
+   .header-banner img{
+    width: 329px;
+    height: 259.17px;
+    margin: 50px 15px 61px;
+   }
+   /*----------------
+    header section end 
+   -----------------*/
+   /*-------------------
+   main sections started
+   ------------------- */
+   main{
+       margin-top: 49px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   .top-player{
+       margin-bottom: 60px;
+   }
+   .players{
+       display: grid;
+       grid-template-columns: 1fr;
+   }
+   /*---------------
+    highlight section start
+    -------------------*/
+    .highlight-container{
+        grid-template-columns: 1fr;
+    }
+   .highlight-title{
+        width: 329px;
+        height: 299px;
+        position: relative;
+        margin: 0 15px;
+        padding: 0;
+        top: 0;
+        margin-bottom: 29px;
+        
+   }
+   .highlight-title h2{
+       font-size: 30px;
+       line-height: 40px;
+   }
+   .highlight-banner img{
+        width: 328px;
+        height: 248px;
+        margin-top: 29px;
+   }
+   /*-----------------
+    highlight section end
+    ---------------*/
+   /*---------------
+    extra section started 
+    --------------*/
+    .extra-section h2{
+    font-size: 20px;
+    margin-bottom: 10px; 
+    }
+    td,th{
+        padding: 5px;
+    }
+    /* footer-style start */
+    .footer-container{
+        margin-top: 40px;
+        margin-bottom: 150px;
+        height: 340px;
+    }
+    }
+    .footer-logo img{
+        width: 275px;
+        height: 63px;
+    }
+}
+/*-----------------
+ footer style end here 
+ ---------------------*/
+ 
